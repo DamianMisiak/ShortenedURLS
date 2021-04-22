@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                box-sizing:border-box;
+                height: 100%;
+                width: 100%;
+                background-color: #281524;
+                color: #fff;
+             }
+             .container form label {
+                 margin-right: 20px;
+            }
+             .container form input {
+                 min-width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Skróć link</button>
+            </form>
+        </div>
+    </body>
+</html>
+<style>
+</style>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                box-sizing:border-box;
+                height: 100%;
+                width: 100%;
+                background-color: #281524;
+                color: #fff;
+            }
+            .container a {
+                margin-left: 10px;
+                text-decoration: none;
+                color: #d1f7ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+             Twój nowy, skrócony link:<a href="{% url 'redirect' slugs=new_url.slug %}">{{ request.get_host }}/{{new_url.slug}}</a>
+        </div>
+    </body>
+</html>
