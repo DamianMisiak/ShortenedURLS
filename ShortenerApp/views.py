@@ -1,5 +1,6 @@
 import random
 import string
+from django.http import Http404
 from django.shortcuts import render, redirect
 from ShortenerApp.models import UrlData
 from ShortenerApp.forms import Url
@@ -35,3 +36,5 @@ def urlRedirect(request, slugs):
 
     if data:
         return redirect(data.url)
+    else:
+        raise Http404
